@@ -1,53 +1,51 @@
-<!-- <hello name="{{ name }}"></hello> -->
-<!-- <p>
-  Start editing to see some magic happen :)
-</p> -->
-
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-  <p style="align-content:normal; margin:auto">Dee Raa</p>
-  <!-- <li [ngbNavItem]="0">
-    <a ngbNavLink>Dee Raaa</a>
-    <ng-template ngbNavContent>
-      <app-first-page></app-first-page>
-    </ng-template>
-  </li> -->
+
+  <a style="align-content:normal; margin:auto;text-decoration: none">Dee Raa</a>
+  
   <li [ngbNavItem]="1">
-    <a ngbNavLink>About</a>
+    <a ngbNavLink class="button" routerLink="/home" routerLinkActive="activebutton">About</a>    
     <ng-template ngbNavContent>
       <app-first-page></app-first-page>
     </ng-template>
   </li>
+  
+  
   <li [ngbNavItem]="2">
-    <a ngbNavLink>Events</a>
+    <a ngbNavLink class="button" routerLink="/events" routerLinkActive="activebutton">Events</a>
     <ng-template ngbNavContent>
       <app-second-page></app-second-page>
-      <!-- <li [ngbNavItem]="link.fragment" *ngFor="let link of links">
-        <a ngbNavLink routerLink="." [(fragment)]="links.fragment">{{ links.title }}</a>
-      </li> -->
     </ng-template>
   </li>
+  
+  
   <li [ngbNavItem]="3">
-    <a ngbNavLink>Registration</a>
+    <a ngbNavLink class="button" routerLink="/registration">Registration</a>
     <ng-template ngbNavContent>
       <p>Sample line in 3rd</p>
+      <app-registration></app-registration>
     </ng-template>
   </li>
+
+
   <li [ngbNavItem]="4">
-    <a ngbNavLink>Contact Us</a>
+    <a ngbNavLink class="button" routerLink="/contact">Contact Us</a>
     <ng-template ngbNavContent>
-      <p>Sample line in 3rd</p>
+      <app-contact></app-contact>
+      <p>Sample line in 4th</p>
     </ng-template>
   </li>
+
+
   <li [ngbNavItem]="5">
-    <a ngbNavLink>Login</a>
+    <a ngbNavLink class="button" routerLink="/login">Login</a>
     <ng-template ngbNavContent>
-      <p>Sample line in 3rd</p>
+      <app-login></app-login>
+      <p>Sample line in 5th</p>
     </ng-template>
   </li>
 </ul>
 
-<!-- <router-outlet></router-outlet> -->
 <div [ngbNavOutlet]="nav" class="mt-2"></div>
 
 <pre>Active: {{ active }}</pre>
-
+<!-- <router-outlet></router-outlet> -->
