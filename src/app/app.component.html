@@ -1,0 +1,53 @@
+<!-- <hello name="{{ name }}"></hello> -->
+<!-- <p>
+  Start editing to see some magic happen :)
+</p> -->
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <p style="align-content:normal; margin:auto">Dee Raa</p>
+  <!-- <li [ngbNavItem]="0">
+    <a ngbNavLink>Dee Raaa</a>
+    <ng-template ngbNavContent>
+      <app-first-page></app-first-page>
+    </ng-template>
+  </li> -->
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>About</a>
+    <ng-template ngbNavContent>
+      <app-first-page></app-first-page>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>Events</a>
+    <ng-template ngbNavContent>
+      <app-second-page></app-second-page>
+      <!-- <li [ngbNavItem]="link.fragment" *ngFor="let link of links">
+        <a ngbNavLink routerLink="." [(fragment)]="links.fragment">{{ links.title }}</a>
+      </li> -->
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink>Registration</a>
+    <ng-template ngbNavContent>
+      <p>Sample line in 3rd</p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="4">
+    <a ngbNavLink>Contact Us</a>
+    <ng-template ngbNavContent>
+      <p>Sample line in 3rd</p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="5">
+    <a ngbNavLink>Login</a>
+    <ng-template ngbNavContent>
+      <p>Sample line in 3rd</p>
+    </ng-template>
+  </li>
+</ul>
+
+<!-- <router-outlet></router-outlet> -->
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+<pre>Active: {{ active }}</pre>
+
